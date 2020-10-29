@@ -1,15 +1,20 @@
-const campoMinado = () => {
-    formatarCampo = formatarCampo()
-};
-
-class CampoMinado {
-    constructor() {
-        this.formatarCampo = () => {
-            return '1';
-        }
-    }
-}
+let campoMinado = new CampoMinado();
 
 module.exports = {
-    CampoMinado
+    campoMinado
 };
+
+class CampoMinado{
+    constructor(){
+        this.campoFormatado = ""
+    }
+
+    formataCampo(campoParaFormatar){
+        let arrayCampo = campoParaFormatar.split();
+
+        arrayCampo.forEach(x => {
+            if(x == '*')
+                this.campoFormatado += "*";
+        })
+    }
+}
