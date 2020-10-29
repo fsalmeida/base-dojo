@@ -1,20 +1,10 @@
-let campoMinado = (value) => value
-
+let campoMinado = (line, column) => new CampoMinado(line,column);
 
 class CampoMinado{
-        constructor(){
-            this.campoFormatado = "1"
-        }
-        
-        
-            // formataCampo(campoParaFormatar){
-                //     let arrayCampo = campoParaFormatar.split();
-            
-                //     arrayCampo.forEach(x => {
-                    //         if(x == '*')
-                    //             this.campoFormatado += "*";
-                    //     })
-                    // } 
+        constructor(line, column){
+            this.line = line;
+            this.column = column;
+        }                        
 }
 
 const returnCampoMinadoValue = ()=> {
