@@ -1,4 +1,4 @@
-let campoMinado = (line, column) => new CampoMinado(line,column);
+let campoMinado = (line, column, campo) => new CampoMinado(line,column,campo);
 
 class CampoMinado{
         constructor(line, column, campo){
@@ -10,7 +10,7 @@ class CampoMinado{
         render(){
             let arrayCampo = this.campo.split('');
             let matrix = [];
-
+            console.log("asddsafsdf ", this.line, this.column, this.campo)
             for (let i = 0 ; i < line ; i++){
                 let initialPosition = i * this.column;
                 let finalPosition = initialPosition + this.column;
@@ -22,14 +22,7 @@ class CampoMinado{
         }
 }
 
-const returnCampoMinadoValue = ()=> {
-
-    let CampoMinadoFinal = new CampoMinado().campoFormatado
-    console.log(CampoMinadoFinal)
-    return CampoMinadoFinal
-}
 
 module.exports = {
-    returnCampoMinadoValue,
     campoMinado
 };
