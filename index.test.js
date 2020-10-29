@@ -1,9 +1,5 @@
-const dojo = require('./index')
+const campoMinado = require('./index')
 
-test('tst should return true', () => {
-    expect(dojo.tst()).toBe(true);
-});
-
-test('tst should return true again', () => {
-    expect(dojo.tst()).toBe(true);
+test('Dado a entrada *........*...... num campo 4 por 4, eu espero que a segunda posição seja 1', () => {
+    expect(campoMinado.formatarCampo(4, 4, '*........*......')).toBe('1');
 });
