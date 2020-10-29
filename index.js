@@ -9,12 +9,16 @@ class CampoMinado{
         
         render(){
             let arrayCampo = this.campo.split('');
-            let campoFormatado = "";
+            let matrix = [];
 
-            arrayCampo.forEach(x => {
-                if(x == '*')
-                    
-            })
+            for (let i = 0 ; i < line ; i++){
+                let initialPosition = i * this.column;
+                let finalPosition = initialPosition + this.column;
+                let matrixLine = arrayCampo.slice(initialPosition, finalPosition);
+                matrix.push(matrixLine);
+            }
+
+            return matrix;
         }
 }
 
