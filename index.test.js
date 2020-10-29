@@ -12,9 +12,12 @@ test('Dado a entrada de campo 4 por 4, espero que a column seja 4', () => {
 test('Dado a entrada *........*...... num campo 4 por 4, espero que a matrix seja construida corretamente', () => {
     
     let foo = campoMinado.campoMinado(4,4, '*........*......').render();
-    expect(foo[0]).toBe('*...');
-    expect(foo[1]).toBe('....');
-    expect(foo[2]).toBe('.*..');
-    expect(foo[3]).toBe('*...');
+    expect(foo[0][0]).toBe('*');
+    expect(foo[2][1]).toBe('*');
+}); 
+
+test('Dado a entrada *........*...... num campo 4 por 4 , espero que posicao [0][1] seja 1', () => {
     
+    let foo = campoMinado.campoMinado(4,4, '*........*......').render();
+    expect(foo[0][1]).toBe('1');
 }); 
