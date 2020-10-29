@@ -1,0 +1,22 @@
+O que aprendemos?
+- Trabalhar com classes em JS (2)
+- Testes com Jest (2)
+- Trabalhar com TDD
+- Programar em conjunto
+- Modo de exportar e "importar/requerer" um módulo
+
+O que podemos melhorar?
+- Tempo para cada participante
+- Tempo total do DOJO (ficou com gostinho de quero mais)
+- Focar mais no TDD (testes antes de código)
+- Todos os participantes com infra 100% completa
+- Infraestrutura (tentar usar estrutura que permita live-share)
+
+O que deve ser repetido?
+- Quantidade de participantes
+
+
+Outros:
+- Testar outros formatos de DOJO, como por exemplo KATA
+- Testar outras tecnologias (Flutter, Blazor, GO, C++, ..)
+- Resolver o mesmo problema em mais de uma tecnologia/framework para ver as diferenças
