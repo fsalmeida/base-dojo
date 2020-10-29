@@ -14,13 +14,14 @@ class CampoMinado{
                     //         if(x == '*')
                     //             this.campoFormatado += "*";
                     //     })
-                    // }
+                    // } 
 }
 
 const returnCampoMinadoValue = ()=> {
 
-    console.log(CampoMinado().campoFormatado)
-    return CampoMinado.campoFormatado
+    let CampoMinadoFinal = new CampoMinado().campoFormatado
+    console.log(CampoMinadoFinal)
+    return CampoMinadoFinal
 }
 
 module.exports = {
