@@ -1,31 +1,26 @@
-let campoMinado = (line, column, campo) => new CampoMinado(line,column,campo);
+const buildField = (lines, columns, inputField) => {
+    let fieldElements = inputField.split('');
+    let field = [];
 
-class CampoMinado{
-        constructor(line, column, campo){
-            this.line = line;
-            this.column = column;
-            this.campo = campo;
-        }
-        
-        render(){
-            let arrayCampo = this.campo.split('');
-            let matrix = [];
-            for (let i = 0 ; i < this.line ; i++){
-                let initialPosition = i * this.column;
-                let finalPosition = initialPosition + this.column;
-                let matrixLine = arrayCampo.slice(initialPosition, finalPosition);                
-                matrix.push(matrixLine);
-            }
+    for (let i = 0; i < lines; i++) {
+        let initialPosition = i * columns;
+        let finalPosition = initialPosition + columns;
+        let fieldLine = fieldElements.slice(initialPosition, finalPosition);
+        field.push(fieldLine);
+    }
 
-            return matrix;
-        }
+    return field;
+}
 
-        convertFields(matriz){
-            
-        }
+class Minefield {
+    constructor(lines, columns, inputField) {
+        this.lines = lines;
+        this.columns = columns;
+        this.field = buildField(lines, columns, inputField)
+    }
 }
 
 
 module.exports = {
-    campoMinado
+    Minefield
 };
